@@ -1,0 +1,7 @@
+{
+  "welcome": {
+    "page_title": "Espace étudiant",
+    "title": "Portail étudiant",
+    "body": "Cette page utilise le domaine de traduction « student » (portal_t) et les fichiers JSON dans jsonassets/i18n/student/."
+  }
+}

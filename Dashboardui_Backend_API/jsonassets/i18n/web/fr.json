@@ -1,0 +1,58 @@
+{
+    "app": {
+        "hint": "Utilisez les traductions client (domaine WEB) dans l’admin pour modifier cette page. Le nom, le slogan et le logo viennent de company.json et des ressources de marque.",
+        "title": "G-Appointement web (domaine WEB)"
+    },
+    "landing": {
+        "brand": {
+            "site_name": "G-Appointement",
+            "site_tagline": "Votre partenaire de soins",
+            "logo_alt": "Logo G-Appointement"
+        },
+        "meta": {
+            "title_suffix": "Rendez-vous en ligne",
+            "description": "Réservez des visites, gérez les agendas et coordonnez les soins en français, anglais et arabe — avec la marque et les couleurs définies dans votre administration."
+        },
+        "nav": {
+            "aria_label": "Navigation principale",
+            "menu_toggle": "Ouvrir le menu principal",
+            "language_menu": "Langue",
+            "about": "À propos",
+            "features": "Fonctionnalités",
+            "contact": "Contact",
+            "login": "Connexion équipe"
+        },
+        "hero": {
+            "tagline": "Votre partenaire de soins",
+            "headline": "Une prise de rendez-vous adaptée à votre cabinet et à vos patients",
+            "subhead": "Réservez des créneaux, gérez les agendas et gardez tout le monde informé — avec une expérience cohérente dans chaque langue, grâce au même bundle WEB publié que vos outils d’administration.",
+            "cta_primary": "Découvrir le fonctionnement",
+            "cta_secondary": "À propos de la plateforme"
+        },
+        "about": {
+            "title": "Conçu pour les équipes de soins",
+            "lead": "De l’accueil aux praticiens, un seul endroit pour coordonner le temps et les soins.",
+            "body": "G-Appointement est pensé comme une plateforme centrée sur le rendez-vous : réduire les absences, clarifier la disponibilité et offrir aux patients un parcours simple pour réserver ou faire un suivi. Les textes marketing restent exacts car ils sont gérés dans le domaine de traduction WEB et publiés en JSON — comme le reste de votre stack."
+        },
+        "features": {
+            "title": "Ce que vous obtenez",
+            "subtitle": "Des bases solides aujourd’hui — la place pour évoluer vers des flux métier complets demain.",
+            "card1_title": "Réservation intelligente",
+            "card1_body": "Permettez aux patients de demander des créneaux conformes à la disponibilité réelle, avec des règles que vous contrôlez par praticien ou par site.",
+            "card2_title": "Des rôles alignés sur le terrain",
+            "card2_body": "Médecins, secrétaires, patients et accompagnants ont chacun un rôle clair — aligné sur le fonctionnement de votre équipe.",
+            "card3_title": "Multilingue par conception",
+            "card3_body": "Les parcours en anglais, français et arabe partagent une seule source de vérité pour les textes d’interface, afin que le site public et les portails restent cohérents."
+        },
+        "cta": {
+            "title": "Prêt à configurer votre cabinet ?",
+            "body": "Connectez-vous avec un compte administrateur pour gérer la marque, les couleurs, les langues et les textes du site depuis le tableau de bord.",
+            "button": "Ouvrir l’administration"
+        },
+        "contact": {
+            "title": "Contact et support",
+            "body": "Les canaux d’assistance et formulaires de contact apparaîtront ici. Pour l’instant, utilisez les moyens habituels de votre cabinet.",
+            "clinic_prefix": "Cabinet"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "default": "light",
+  "fallback": "light",
+  "supported": {
+    "light": {
+      "name": "Light",
+      "native": "Light",
+      "code": "light",
+      "description": "Light theme with bright colors and high contrast",
+      "icon": "☀️"
+    },
+    "dark": {
+      "name": "Dark", 
+      "native": "Dark",
+      "code": "dark",
+      "description": "Dark theme with dark colors and low contrast",
+      "icon": "🌙"
+    }
+  },
+  "settings": {
+    "auto_detect": false,
+    "remember_user_preference": true,
+    "system_theme_fallback": true
+  }
+}
+

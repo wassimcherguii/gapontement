@@ -1,0 +1,177 @@
+{
+    "version": 1,
+    "page": "home",
+    "locale": "en",
+    "generated_at": "2026-05-03T23:52:23+00:00",
+    "meta": {
+        "title": "G-Appointement — Home",
+        "description": "Book appointments online."
+    },
+    "topBar": {
+        "phone": "+1 555 0100",
+        "emergency": "24\/7 emergency line",
+        "hours": "Mon–Fri 8:00–18:00"
+    },
+    "nav": [
+        {
+            "href": "#about",
+            "label": "About",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#features",
+            "label": "Features",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#contact",
+            "label": "Contact",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#appointments",
+            "label": "Book appointment",
+            "is_cta": true,
+            "route_key": null,
+            "icon": null
+        }
+    ],
+    "hero": {
+        "tagline": "Care, simplified",
+        "headline": "LP_SEEDED_HERO_EN",
+        "subhead": "Scheduling that fits your clinic and your patients.",
+        "cta_primary": "See how it works",
+        "cta_primary_href": "#features",
+        "cta_secondary": "About us",
+        "cta_secondary_href": "#about"
+    },
+    "about": {
+        "title": "About G-Appointement",
+        "lead": "Built for modern practices.",
+        "body": "We help clinics reduce no-shows and give patients a clear path to care."
+    },
+    "cta": {
+        "title": "Ready to streamline scheduling?",
+        "body": "Sign in to your clinic dashboard.",
+        "button": "Admin login"
+    },
+    "departments": [
+        {
+            "type": "department",
+            "slug": "cardiology",
+            "image": null,
+            "href": "#departments",
+            "user_id": null,
+            "extra": null,
+            "title": "Cardiology",
+            "subtitle": "Heart health",
+            "body": null,
+            "cta_label": null
+        }
+    ],
+    "featuredDoctors": [
+        {
+            "type": "doctor",
+            "slug": "dr-demo",
+            "image": null,
+            "href": "#doctors",
+            "user_id": null,
+            "extra": null,
+            "title": "Dr. Demo",
+            "subtitle": "General practice",
+            "body": null,
+            "cta_label": "Book"
+        }
+    ],
+    "quickBooking": {
+        "enabled": true,
+        "copy": {
+            "title": "Quick booking",
+            "hint": "Choose a department to get started."
+        }
+    },
+    "whyUs": {
+        "title": "Why clinics choose us",
+        "subtitle": "Practical tools for front desk and clinicians.",
+        "items": [
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Fewer no-shows",
+                "subtitle": null,
+                "body": "Smart reminders keep patients on track.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Clear waitlists",
+                "subtitle": null,
+                "body": "Fill openings when slots free up.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Secure by design",
+                "subtitle": null,
+                "body": "Role-based access for your team.",
+                "cta_label": null
+            }
+        ]
+    },
+    "testimonials": [
+        {
+            "type": "testimonial",
+            "slug": null,
+            "image": null,
+            "href": null,
+            "user_id": null,
+            "extra": null,
+            "title": "Clinic lead",
+            "subtitle": null,
+            "body": "“Our front desk finally has one place to manage bookings.”",
+            "cta_label": null
+        }
+    ],
+    "blog": [
+        {
+            "type": "blog_teaser",
+            "slug": "welcome-post",
+            "image": null,
+            "href": "#blog",
+            "user_id": null,
+            "extra": null,
+            "title": "What’s new",
+            "subtitle": null,
+            "body": "Product updates and tips for clinics.",
+            "cta_label": "Read"
+        }
+    ],
+    "contact": {
+        "title": "Contact",
+        "body": "Reach the team for demos and support.",
+        "cta": "Email us"
+    },
+    "footer": {
+        "line": "© G-Appointement. All rights reserved."
+    }
+}

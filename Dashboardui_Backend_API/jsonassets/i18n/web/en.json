@@ -1,0 +1,58 @@
+{
+    "app": {
+        "hint": "Use admin Client translations (domain WEB) to edit this landing page. Company name, tagline, and logo come from company.json and brand assets.",
+        "title": "G-Appointement web (WEB domain)"
+    },
+    "landing": {
+        "brand": {
+            "site_name": "G-Appointement",
+            "site_tagline": "Your partner in care",
+            "logo_alt": "G-Appointement logo"
+        },
+        "meta": {
+            "title_suffix": "Online appointments",
+            "description": "Book visits, manage calendars, and coordinate care in English, French, and Arabic — with branding and colors from your admin dashboard."
+        },
+        "nav": {
+            "aria_label": "Main navigation",
+            "menu_toggle": "Open main menu",
+            "language_menu": "Language",
+            "about": "About",
+            "features": "Features",
+            "contact": "Contact",
+            "login": "Staff login"
+        },
+        "hero": {
+            "tagline": "Your partner in care",
+            "headline": "Scheduling that fits your clinic and your patients",
+            "subhead": "Book visits, manage calendars, and keep everyone informed — with a consistent experience in every language, powered by the same published WEB translation bundle your admin tools use.",
+            "cta_primary": "See how it works",
+            "cta_secondary": "About the platform"
+        },
+        "about": {
+            "title": "Built for healthcare teams",
+            "lead": "From front desk to physicians, one place to coordinate care and time.",
+            "body": "G-Appointement is designed as an appointment-first platform: reduce no-shows, clarify availability, and give patients a clear path to book or follow up. Marketing and landing copy stay accurate because strings are managed in the WEB translation domain and published to JSON — just like the rest of your stack."
+        },
+        "features": {
+            "title": "What you get",
+            "subtitle": "Solid foundations today — room to grow into full practice workflows tomorrow.",
+            "card1_title": "Smart booking",
+            "card1_body": "Let patients request slots that match real availability, with rules you control per provider or location.",
+            "card2_title": "Roles that match the floor",
+            "card2_body": "Doctors, secretaries, patients, and companions each have a clear role — aligned with how your team already works.",
+            "card3_title": "Multilingual by design",
+            "card3_body": "English, French, and Arabic flows share one source of truth for UI copy, so your public site and portals stay in sync."
+        },
+        "cta": {
+            "title": "Ready to configure your practice?",
+            "body": "Sign in with an admin account to manage brand, colors, languages, and website copy from the dashboard.",
+            "button": "Open admin dashboard"
+        },
+        "contact": {
+            "title": "Contact & support",
+            "body": "Support channels and contact forms will appear here. For now, reach your team through your usual clinic channels.",
+            "clinic_prefix": "Practice"
+        }
+    }
+}

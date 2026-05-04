@@ -1,0 +1,177 @@
+{
+    "version": 1,
+    "page": "home",
+    "locale": "fr",
+    "generated_at": "2026-05-03T23:52:23+00:00",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "topBar": {
+        "phone": "+33 1 23 45 67 89",
+        "emergency": "Urgences 24h\/24",
+        "hours": "Lun–Ven 8h–18h"
+    },
+    "nav": [
+        {
+            "href": "#about",
+            "label": "À propos",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#features",
+            "label": "Fonctions",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#contact",
+            "label": "Contact",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#appointments",
+            "label": "Prendre rendez-vous",
+            "is_cta": true,
+            "route_key": null,
+            "icon": null
+        }
+    ],
+    "hero": {
+        "tagline": "Soins, simplifiés",
+        "headline": "LP_SEEDED_HERO_FR",
+        "subhead": "Une prise de rendez-vous qui respecte votre cabinet et vos patients.",
+        "cta_primary": "Découvrir",
+        "cta_primary_href": "#features",
+        "cta_secondary": "À propos",
+        "cta_secondary_href": "#about"
+    },
+    "about": {
+        "title": "À propos",
+        "lead": "Pensé pour les cabinets modernes.",
+        "body": "Réduisez les absences et simplifiez le parcours patient."
+    },
+    "cta": {
+        "title": "Prêt à simplifier les rendez-vous ?",
+        "body": "Connectez-vous au tableau de bord.",
+        "button": "Connexion admin"
+    },
+    "departments": [
+        {
+            "type": "department",
+            "slug": "cardiology",
+            "image": null,
+            "href": "#departments",
+            "user_id": null,
+            "extra": null,
+            "title": "Cardiologie",
+            "subtitle": "Santé cardiaque",
+            "body": null,
+            "cta_label": null
+        }
+    ],
+    "featuredDoctors": [
+        {
+            "type": "doctor",
+            "slug": "dr-demo",
+            "image": null,
+            "href": "#doctors",
+            "user_id": null,
+            "extra": null,
+            "title": "Dr Demo",
+            "subtitle": "Médecine générale",
+            "body": null,
+            "cta_label": "Book"
+        }
+    ],
+    "quickBooking": {
+        "enabled": true,
+        "copy": {
+            "title": "Réservation rapide",
+            "hint": "Choisissez un service."
+        }
+    },
+    "whyUs": {
+        "title": "Pourquoi nous choisir",
+        "subtitle": "Des outils utiles au quotidien.",
+        "items": [
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Moins d'absences",
+                "subtitle": null,
+                "body": "Rappels automatiques.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Listes d’attente",
+                "subtitle": null,
+                "body": "Remplissez les créneaux libérés.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "Sécurité",
+                "subtitle": null,
+                "body": "Accès par rôles.",
+                "cta_label": null
+            }
+        ]
+    },
+    "testimonials": [
+        {
+            "type": "testimonial",
+            "slug": null,
+            "image": null,
+            "href": null,
+            "user_id": null,
+            "extra": null,
+            "title": "Responsable cabinet",
+            "subtitle": null,
+            "body": "« Enfin un seul endroit pour les rendez-vous. »",
+            "cta_label": null
+        }
+    ],
+    "blog": [
+        {
+            "type": "blog_teaser",
+            "slug": "welcome-post",
+            "image": null,
+            "href": "#blog",
+            "user_id": null,
+            "extra": null,
+            "title": "Nouveautés",
+            "subtitle": null,
+            "body": "Mises à jour produit.",
+            "cta_label": "Lire"
+        }
+    ],
+    "contact": {
+        "title": "Contact",
+        "body": "Démos et support.",
+        "cta": "Écrivez-nous"
+    },
+    "footer": {
+        "line": "© G-Appointement. Tous droits réservés."
+    }
+}

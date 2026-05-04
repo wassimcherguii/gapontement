@@ -1,0 +1,18 @@
+{
+    "logo": {
+        "filename": "logo_1777849574.png",
+        "path": "assets\/logos\/logo_1777849574.png",
+        "alt": "Logo",
+        "description": "Main company logo used in headers, sidebars, and branding"
+    },
+    "favicon": {
+        "filename": "favicon_1777849728.png",
+        "path": "assets\/favicons\/favicon_1777849728.png",
+        "alt": "Test",
+        "description": "Browser tab icon and favicon"
+    },
+    "fallback": {
+        "logo_alt": "Technodec",
+        "favicon_alt": "Technodec"
+    }
+}

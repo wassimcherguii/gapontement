@@ -1,0 +1,103 @@
+{
+  "light": {
+    "brand": {
+      "primary": "#0F4C81",
+      "primary-dark": "#0B355A",
+      "primary-light": "#3A7CA5",
+      "primary-hover": "#0D3F6B",
+      "secondary": "#14B8A6",
+      "accent": "#22D3EE"
+    },
+    "complementary": {
+      "blue": "#3B82F6",
+      "teal": "#14B8A6",
+      "cyan": "#22D3EE",
+      "soft-blue": "#93C5FD"
+    },
+    "neutral": {
+      "white": "#ffffff",
+      "light-background": "#F8FAFC",
+      "gray-50": "#f8fafc",
+      "gray-100": "#f1f5f9",
+      "gray-200": "#e2e8f0",
+      "gray-300": "#cbd5e1",
+      "gray-400": "#94a3b8",
+      "gray-500": "#64748b",
+      "gray-600": "#475569",
+      "gray-700": "#334155",
+      "gray-800": "#1e293b",
+      "gray-900": "#0f172a"
+    },
+    "shadows": {
+      "primary": {
+        "light": "#0F4C8120",
+        "medium": "#0F4C8140",
+        "strong": "#0F4C8160"
+      }
+    },
+    "semantic": {
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#0F4C81"
+    },
+    "usage": {
+      "background": "#F8FAFC",
+      "surface": "#ffffff",
+      "text": "#0f172a",
+      "text-secondary": "#475569",
+      "border": "#e2e8f0"
+    }
+  },
+
+  "dark": {
+    "brand": {
+      "primary": "#3A7CA5",
+      "primary-dark": "#0F4C81",
+      "primary-light": "#60A5FA",
+      "primary-hover": "#2F6690",
+      "secondary": "#2DD4BF",
+      "accent": "#67E8F9"
+    },
+    "complementary": {
+      "blue": "#60A5FA",
+      "teal": "#2DD4BF",
+      "cyan": "#67E8F9",
+      "soft-blue": "#BFDBFE"
+    },
+    "neutral": {
+      "white": "#0f172a",
+      "light-background": "#020617",
+      "gray-50": "#020617",
+      "gray-100": "#0f172a",
+      "gray-200": "#1e293b",
+      "gray-300": "#334155",
+      "gray-400": "#475569",
+      "gray-500": "#94a3b8",
+      "gray-600": "#cbd5e1",
+      "gray-700": "#e2e8f0",
+      "gray-800": "#f1f5f9",
+      "gray-900": "#ffffff"
+    },
+    "shadows": {
+      "primary": {
+        "light": "#3A7CA520",
+        "medium": "#3A7CA540",
+        "strong": "#3A7CA560"
+      }
+    },
+    "semantic": {
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "error": "#F87171",
+      "info": "#3A7CA5"
+    },
+    "usage": {
+      "background": "#020617",
+      "surface": "#0f172a",
+      "text": "#f8fafc",
+      "text-secondary": "#cbd5e1",
+      "border": "#1e293b"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "welcome": {
+    "page_title": "منطقة المعلم",
+    "title": "بوابة المعلم",
+    "body": "تستخدم هذه الصفحة نطاق ترجمة المعلم (portal_t) وحزم JSON في jsonassets/i18n/teacher/."
+  }
+}

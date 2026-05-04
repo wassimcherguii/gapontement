@@ -1,0 +1,7 @@
+{
+  "welcome": {
+    "page_title": "Espace enseignant",
+    "title": "Portail enseignant",
+    "body": "Cette page utilise le domaine de traduction « teacher » (portal_t) et les fichiers JSON dans jsonassets/i18n/teacher/."
+  }
+}

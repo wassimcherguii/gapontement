@@ -1,0 +1,177 @@
+{
+    "version": 1,
+    "page": "home",
+    "locale": "ar",
+    "generated_at": "2026-05-03T23:52:23+00:00",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "topBar": {
+        "phone": "+966 11 000 0000",
+        "emergency": "طوارئ ٢٤\/٧",
+        "hours": "الأحد–الخميس ٨–١٨"
+    },
+    "nav": [
+        {
+            "href": "#about",
+            "label": "من نحن",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#features",
+            "label": "المزايا",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#contact",
+            "label": "اتصل",
+            "is_cta": false,
+            "route_key": null,
+            "icon": null
+        },
+        {
+            "href": "#appointments",
+            "label": "احجز موعداً",
+            "is_cta": true,
+            "route_key": null,
+            "icon": null
+        }
+    ],
+    "hero": {
+        "tagline": "رعاية مبسّطة",
+        "headline": "جدولة مواعيد بسهولة",
+        "subhead": "نظام يناسب عيادتك ومرضاك.",
+        "cta_primary": "اكتشف المزيد",
+        "cta_primary_href": "#features",
+        "cta_secondary": "من نحن",
+        "cta_secondary_href": "#about"
+    },
+    "about": {
+        "title": "عن المنصة",
+        "lead": "للعيادات الحديثة.",
+        "body": "نساعدك على تقليل الغياب وتسهيل حجز المواعيد."
+    },
+    "cta": {
+        "title": "جاهز لتبسيط المواعيد؟",
+        "body": "سجّل الدخول إلى لوحة العيادة.",
+        "button": "دخول المشرف"
+    },
+    "departments": [
+        {
+            "type": "department",
+            "slug": "cardiology",
+            "image": null,
+            "href": "#departments",
+            "user_id": null,
+            "extra": null,
+            "title": "أمراض القلب",
+            "subtitle": "صحة القلب",
+            "body": null,
+            "cta_label": null
+        }
+    ],
+    "featuredDoctors": [
+        {
+            "type": "doctor",
+            "slug": "dr-demo",
+            "image": null,
+            "href": "#doctors",
+            "user_id": null,
+            "extra": null,
+            "title": "د. تجريبي",
+            "subtitle": "طب عام",
+            "body": null,
+            "cta_label": "Book"
+        }
+    ],
+    "quickBooking": {
+        "enabled": true,
+        "copy": {
+            "title": "حجز سريع",
+            "hint": "اختر القسم للبدء."
+        }
+    },
+    "whyUs": {
+        "title": "لماذا نحن",
+        "subtitle": "أدوات عملية للاستقبال والأطباء.",
+        "items": [
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "تقليل الغياب",
+                "subtitle": null,
+                "body": "تذكيرات ذكية.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "قوائم انتظار",
+                "subtitle": null,
+                "body": "املأ الأوقات الفارغة.",
+                "cta_label": null
+            },
+            {
+                "type": "feature",
+                "slug": null,
+                "image": null,
+                "href": null,
+                "user_id": null,
+                "extra": null,
+                "title": "أمان",
+                "subtitle": null,
+                "body": "صلاحيات حسب الدور.",
+                "cta_label": null
+            }
+        ]
+    },
+    "testimonials": [
+        {
+            "type": "testimonial",
+            "slug": null,
+            "image": null,
+            "href": null,
+            "user_id": null,
+            "extra": null,
+            "title": "مسؤول عيادة",
+            "subtitle": null,
+            "body": "« مكان واحد لإدارة المواعيد. »",
+            "cta_label": null
+        }
+    ],
+    "blog": [
+        {
+            "type": "blog_teaser",
+            "slug": "welcome-post",
+            "image": null,
+            "href": "#blog",
+            "user_id": null,
+            "extra": null,
+            "title": "جديد",
+            "subtitle": null,
+            "body": "تحديثات المنتج.",
+            "cta_label": "اقرأ"
+        }
+    ],
+    "contact": {
+        "title": "اتصل بنا",
+        "body": "للعروض والدعم.",
+        "cta": "راسلنا"
+    },
+    "footer": {
+        "line": "© G-Appointement. جميع الحقوق محفوظة."
+    }
+}

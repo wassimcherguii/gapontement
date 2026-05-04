@@ -1,0 +1,26 @@
+{
+    "default": "en",
+    "supported": {
+        "en": {
+            "code": "en",
+            "name": "English",
+            "native": "English",
+            "direction": "ltr",
+            "flag": "🇺🇸"
+        },
+        "fr": {
+            "code": "fr",
+            "name": "French",
+            "native": "Français",
+            "direction": "ltr",
+            "flag": "🇫🇷"
+        },
+        "ar": {
+            "code": "ar",
+            "name": "Arabic",
+            "native": "العربية",
+            "direction": "rtl",
+            "flag": "🇸🇦"
+        }
+    }
+}

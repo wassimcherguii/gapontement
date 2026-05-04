@@ -1,0 +1,7 @@
+{
+  "welcome": {
+    "page_title": "Teacher area",
+    "title": "Teacher portal",
+    "body": "This page uses the teacher translation domain (portal_t) and JSON bundles under jsonassets/i18n/teacher/."
+  }
+}
