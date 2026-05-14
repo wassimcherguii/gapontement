@@ -23,7 +23,7 @@ return [
     'edit' => 'تعديل',
     'delete' => 'حذف',
     'loading' => 'جاري التحميل...',
-    
+
     // Authentication
     'admin_login' => 'تسجيل دخول الإدارة',
     'superadmin_login' => 'تسجيل دخول المشرف الرئيسي',
@@ -50,14 +50,14 @@ return [
     'manage_brand' => 'إدارة أصول العلامة التجارية',
     'color_palette' => 'لوحة الألوان',
     'manage_colors' => 'إدارة لوحة الألوان',
-    
+
     // Settings
     'settings' => 'الإعدادات',
     'theme' => 'المظهر',
     'light' => 'فاتح',
     'dark' => 'داكن',
     'contact_us' => 'اتصل بنا',
-    
+
     // Admin Panel
     'admin_panel' => 'لوحة الإدارة',
     'admin_dashboard' => 'لوحة تحكم الإدارة',
@@ -68,7 +68,7 @@ return [
     'content' => 'المحتوى',
     'reports' => 'التقارير',
     'profile' => 'الملف الشخصي',
-    
+
     // Dashboard Stats
     'total_users' => 'إجمالي المستخدمين',
     'total_orders' => 'إجمالي الطلبات',
@@ -103,12 +103,130 @@ return [
 
     // Website
     'website' => 'الموقع',
-    'website_section_intro' => 'إدارة الموقع العام: الصفحة الرئيسية وصفحات الدعم والمحتوى التسويقي. ستُضاف محررات لكل صفحة هنا لاحقاً.',
+    'website_section_intro' => 'إدارة الموقع العام: تعديل الصفحة الرئيسية وصفحات الدعم والمحتوى التسويقي. احفظ التغييرات ثم انشر لتحديث ملفات JSON التي يعرضها الموقع.',
     'website_home_page' => 'الصفحة الرئيسية',
     'website_about_us' => 'من نحن',
     'website_blog' => 'المدونة',
     'website_contacts' => 'اتصل بنا',
     'website_editor_placeholder' => 'سيظهر هنا محرر الصفحة وكتل المحتوى في تحديث لاحق.',
+
+    'blog_admin_intro' => 'المقالات تُخزَّن في قاعدة البيانات فقط (وليس في JSON الصفحة). المقالات المنشورة والمميّزة تظهر في الصفحة الرئيسية.',
+    'blog_admin_new' => 'مقال جديد',
+    'blog_admin_create' => 'مقال مدونة جديد',
+    'blog_admin_edit' => 'تعديل المقال',
+    'blog_admin_saved' => 'تم حفظ المقال.',
+    'blog_admin_deleted' => 'تم حذف المقال.',
+    'blog_admin_delete_confirm' => 'حذف هذا المقال نهائياً؟',
+    'blog_admin_empty' => 'لا توجد مقالات بعد.',
+    'blog_admin_col_slug' => 'المعرّف',
+    'blog_admin_col_status' => 'الحالة',
+    'blog_admin_col_featured' => 'الرئيسية',
+    'blog_admin_col_views' => 'المشاهدات',
+    'blog_admin_col_likes' => 'الإعجابات',
+    'blog_admin_col_saves' => 'الحفظ',
+    'blog_admin_col_actions' => 'إجراءات',
+    'blog_admin_section_meta' => 'إعدادات المقال',
+    'blog_admin_slug' => 'رابط المقال (أحرف صغيرة وشرطات)',
+    'blog_admin_status' => 'الحالة',
+    'blog_admin_published_at' => 'تاريخ النشر',
+    'blog_admin_featured_landing' => 'مميز في الصفحة الرئيسية',
+    'blog_admin_sort_order' => 'ترتيب الظهور في الرئيسية',
+    'blog_admin_section_stats' => 'المشاهدات والإعجابات والحفظ',
+    'blog_admin_stats_hint' => 'يمكنك تعديل هذه الأرقام يدوياً حالياً.',
+    'blog_admin_section_images' => 'الصور',
+    'blog_admin_images_hint' => 'مسار تخزين أو رابط كامل في كل سطر (حد أقصى 20).',
+    'blog_admin_title' => 'العنوان',
+    'blog_admin_excerpt' => 'وصف قصير',
+    'blog_admin_body' => 'المحتوى الكامل (محرر)',
+    'blog_status_draft' => 'مسودة',
+    'blog_status_published' => 'منشور',
+    'blog_status_archived' => 'مؤرشف',
+    'blog_public_back_home' => 'العودة للرئيسية',
+    'blog_public_read_more' => 'اقرأ المزيد',
+    'blog_public_missing_locale' => 'هذا المقال غير متوفر بلغتك.',
+
+    // Landing page CMS (admin /website/landing)
+    'saved' => 'تم الحفظ.',
+    'publish' => 'نشر الصفحة الرئيسية',
+    'enabled' => 'مفعّل',
+    'landing_cms_publish_done' => 'تم نشر الصفحة الرئيسية بنجاح.',
+    'landing_cms_tab_database' => 'قاعدة البيانات (النماذج)',
+    'landing_cms_db_save_reminder' => 'لا يُحفظ شيء حتى تنقر «حفظ». النموذج طويل — استخدم الزر هنا أو مرّر إلى الأسفل.',
+    'landing_cms_btn_import_json_files' => 'استيراد JSON ذاكرة الصفحة → قاعدة البيانات (كل اللغات)',
+    'landing_cms_btn_save_json_file' => 'حفظ في ملف JSON (اللغة النشطة)',
+    'landing_cms_btn_import_editor_to_db' => 'تطبيق JSON المحرر → قاعدة البيانات (اللغة النشطة)',
+    'landing_cms_tab_json' => 'JSON (ذاكرة الصفحة)',
+    'landing_cms_json_intro' => 'كل لغة تطابق الملف المنشور jsonassets/page-cache/home.{locale}.json. الحقول أدناه تعكس هذا JSON ويتم مزامنة لوحة JSON الخام. «تطبيق» يحفظ الحزمة في قاعدة البيانات لهذه اللغة. استخدم «قاعدة البيانات → JSON» لإعادة إنشاء الملفات. بعد أي تعديل نفّذ قاعدة البيانات → JSON ليعرض الموقع الملفات الجديدة.',
+    'landing_cms_json_toolbar_hint' => 'تنطبق الإجراءات على تبويب اللغة النشط. «حفظ في ملف JSON» يكتب إلى ذاكرة الصفحة على القرص فقط (وليس قاعدة البيانات). «تطبيق JSON المحرر → قاعدة البيانات» يستورد محتوى المحرر الحالي لتلك اللغة.',
+    'landing_cms_json_form_intro' => 'نفس ترتيب تبويب قاعدة البيانات، لكن القيم تُحمّل من JSON ذاكرة الصفحة لهذه اللغة. التعديلات تحدّث JSON الخام في المتصفح فقط حتى تنقر «تطبيق JSON → قاعدة البيانات». لا يُكتب على القرص أو ملفات الذاكرة المؤقتة حتى تنفّذ تلك الإجراءات.',
+    'landing_cms_json_nav_item' => 'عنصر القائمة',
+    'landing_cms_json_raw_toggle' => 'JSON خام (متقدم)',
+    'landing_cms_json_why_us_cards' => 'لماذا نحن — البطاقات',
+    'landing_cms_json_locale_tabs' => 'JSON حسب اللغة',
+    'landing_cms_json_editor_label' => 'حزمة :locale',
+    'landing_cms_sync_json_to_db' => 'تطبيق JSON → قاعدة البيانات (هذه اللغة)',
+    'landing_cms_sync_db_to_json' => 'كتابة قاعدة البيانات → ملفات JSON (كل اللغات)',
+    'landing_cms_sync_db_to_json_hint' => 'يعيد إنشاء jsonassets/page-cache/home.*.json من قاعدة البيانات. استخدمه بعد الحفظ في تبويب قاعدة البيانات أو بعد استيراد JSON.',
+    'landing_cms_json_invalid' => 'JSON أو لغة غير صالحة. لم يُحفظ شيء.',
+    'landing_cms_json_imported' => 'تم تطبيق JSON على قاعدة البيانات للغة المختارة.',
+    'landing_cms_json_saved_to_disk' => 'تم حفظ ملف JSON لذاكرة الصفحة لهذه اللغة وتحديث بصمة الميتا.',
+    'landing_cms_json_imported_files' => 'تم استيراد :count ملف(ات) لغة من ذاكرة الصفحة إلى قاعدة البيانات.',
+    'landing_cms_json_imported_files_none' => 'لم يُعثر على ملفات JSON صالحة في ذاكرة الصفحة للاستيراد.',
+    'landing_cms_checksum' => 'بصمة التحقق: :checksum',
+    'landing_cms_seo_section' => 'تحسين محركات البحث والوصف',
+    'landing_cms_top_bar_section' => 'الشريط العلوي',
+    'landing_cms_hero_section' => 'قسم البطل',
+    'landing_cms_section_about' => 'من نحن',
+    'landing_cms_section_contact' => 'اتصل بنا',
+    'landing_cms_section_cta' => 'دعوة لاتخاذ إجراء',
+    'landing_cms_section_footer' => 'تذييل الصفحة',
+    'landing_cms_why_us_section' => 'لماذا نحن (عناوين القسم)',
+    'landing_cms_quick_booking_section' => 'الحجز السريع',
+    'landing_cms_navigation_section' => 'القائمة',
+    'landing_cms_entities_heading' => 'بطاقات وصفوف — :section',
+    'landing_cms_block_departments' => 'الأقسام',
+    'landing_cms_block_featured_doctors' => 'أطباء مميزون',
+    'landing_cms_block_why_us' => 'لماذا نحن',
+    'landing_cms_block_testimonials' => 'آراء العملاء',
+    'landing_cms_block_blog' => 'المدونة',
+    'landing_cms_entity_type_department' => 'قسم',
+    'landing_cms_entity_type_doctor' => 'طبيب',
+    'landing_cms_entity_type_feature' => 'ميزة',
+    'landing_cms_entity_type_testimonial' => 'شهادة',
+    'landing_cms_entity_type_blog_teaser' => 'مقتطف مدونة',
+    'landing_cms_field_meta_title' => 'عنوان الميتا',
+    'landing_cms_field_meta_description' => 'وصف الميتا',
+    'landing_cms_field_phone' => 'الهاتف',
+    'landing_cms_field_emergency' => 'الطوارئ',
+    'landing_cms_field_hours' => 'ساعات العمل',
+    'landing_cms_field_tagline' => 'الشعار القصير',
+    'landing_cms_field_headline' => 'العنوان الرئيسي',
+    'landing_cms_field_subhead' => 'العنوان الفرعي',
+    'landing_cms_field_cta_primary' => 'نص الزر الأساسي',
+    'landing_cms_field_cta_primary_href' => 'رابط الزر الأساسي',
+    'landing_cms_field_cta_secondary' => 'نص الزر الثانوي',
+    'landing_cms_field_cta_secondary_href' => 'رابط الزر الثانوي',
+    'landing_cms_field_title' => 'العنوان',
+    'landing_cms_field_lead' => 'المقدمة',
+    'landing_cms_field_body' => 'المحتوى',
+    'landing_cms_field_cta' => 'نص الدعوة',
+    'landing_cms_field_button' => 'نص الزر',
+    'landing_cms_field_line' => 'سطر التذييل',
+    'landing_cms_field_subtitle' => 'العنوان الفرعي',
+    'landing_cms_field_hint' => 'تلميح',
+    'landing_cms_field_href' => 'الرابط (href)',
+    'landing_cms_field_sort_order' => 'ترتيب العرض',
+    'landing_cms_field_slug' => 'المعرّف النصي',
+    'landing_cms_field_image_path' => 'مسار الصورة',
+    'landing_cms_field_cta_label' => 'نص الزر (دعوة)',
+    'landing_cms_nav_visible' => 'ظاهر في القائمة',
+    'landing_cms_nav_cta' => 'زر دعوة بارز',
+    'landing_cms_nav_label' => 'التسمية (:locale)',
+    'landing_cms_phase2_user_id' => 'مستخدم مرتبط (المرحلة 2)',
+    'landing_cms_placeholder_title' => 'العنوان',
+    'landing_cms_placeholder_subtitle' => 'العنوان الفرعي',
+    'landing_cms_placeholder_body' => 'المحتوى',
+    'landing_cms_placeholder_cta_label' => 'نص الزر',
 
     // Assets
     'assets' => 'الأصول',
@@ -199,7 +317,7 @@ return [
     'import_from_file' => 'استيراد من ملف',
     'export_translations' => 'تصدير الترجمات',
     'export_to_file' => 'تصدير إلى ملف',
-    
+
     // Brand Asset Management
     'upload_logo' => 'رفع الشعار',
     'upload_favicon' => 'رفع الأيقونة',
@@ -217,7 +335,7 @@ return [
     'upload_failed' => 'فشل الرفع!',
     'sync_success' => 'تمت المزامنة بنجاح!',
     'sync_failed' => 'فشلت المزامنة!',
-    
+
     // Old Brand Management
     'old_brand' => 'العلامة التجارية القديمة',
     'old_brand_management' => 'إدارة العلامة التجارية القديمة',
@@ -231,27 +349,27 @@ return [
     'delete_failed' => 'فشل الحذف!',
     'current' => 'الحالي',
     'error_loading_images' => 'خطأ في تحميل الصور',
-    
+
     // Image Preview Modal
     'image_preview' => 'معاينة الصورة',
     'download' => 'تحميل',
-    
+
     // Delete Confirmation Modal
     'confirm_delete' => 'تأكيد الحذف',
     'delete_warning' => 'لا يمكن التراجع عن هذا الإجراء.',
     'delete_warning_text' => 'هل أنت متأكد من حذف هذه الصورة؟ هذا الإجراء دائم ولا يمكن التراجع عنه.',
-    
+
     // Notification Messages
     'delete_success_with_type' => 'تم حذف :type بنجاح',
     'restore_success_with_filename' => 'تم استعادة :type بنجاح مع اسم الملف الجديد: :filename',
     'restore_success' => 'تم استعادة :type بنجاح',
     'cannot_delete_current' => 'لا يمكن حذف :type الحالي',
-    
+
     // Loading States
     'deleting' => 'جاري الحذف',
     'restoring' => 'جاري الاستعادة',
     'request_in_progress' => 'الطلب قيد التنفيذ بالفعل. يرجى الانتظار.',
-    
+
     // Brand Management Notifications
     'logo_upload_success' => 'تم رفع الشعار بنجاح',
     'logo_upload_failed' => 'فشل في رفع الشعار',
@@ -263,7 +381,7 @@ return [
     'brand_sync_success' => 'تم مزامنة أصول العلامة التجارية إلى JSON بنجاح',
     'brand_sync_failed' => 'فشل في مزامنة العلامة التجارية',
     'file_not_found' => 'الملف غير موجود',
-    
+
     // Authentication Notifications
     'email_required' => 'البريد الإلكتروني مطلوب',
     'email_invalid' => 'يرجى إدخال عنوان بريد إلكتروني صحيح',
@@ -272,13 +390,13 @@ return [
     'no_account_found' => 'لم يتم العثور على حساب بهذا البريد الإلكتروني',
     'no_admin_permission' => 'ليس لديك إذن للوصول إلى منطقة الإدارة',
     'password_incorrect' => 'كلمة المرور المقدمة غير صحيحة',
-    
+
     // Color Management
     'color_updated_success' => 'تم تحديث اللون بنجاح',
     'color_update_failed' => 'فشل تحديث اللون',
     'color_sync_success' => 'تم مزامنة الألوان إلى JSON بنجاح',
     'color_sync_failed' => 'فشل مزامنة الألوان إلى JSON',
-    
+
     // Company Settings
     'company' => 'الشركة',
     'company_settings' => 'إعدادات الشركة',
@@ -395,10 +513,25 @@ return [
     'client_translations_sync_diff_checksum_mismatch' => 'لا تطابق تصدير قاعدة البيانات.',
     'client_translations_sync_diff_checksum_no_meta' => 'لا توجد بيانات بصمة بعد (نفّذ النشر مرة واحدة).',
 
+    // Landing page (public) floating settings
+    'landing_fp_settings' => 'إعدادات الصفحة',
+    'landing_fp_title' => 'المظهر واللغة',
+    'landing_fp_language' => 'اللغة',
+    'landing_fp_theme' => 'السمة',
+    'landing_fp_light' => 'فاتح',
+    'landing_fp_dark' => 'داكن',
+    'landing_fp_contact' => 'هاتف التواصل',
+    'landing_fp_phone_unavailable' => 'لا يوجد رقم في محتوى الصفحة بعد.',
+    'landing_fp_close' => 'إغلاق',
+    'landing_fp_open' => 'فتح الإعدادات',
+    'landing_fp_kicker' => 'التفضيلات',
+    'landing_fp_subtitle' => 'اللغة، المظهر، وطرق التواصل.',
+    'landing_fp_theme_saved_hint' => 'يُحفظ المظهر على هذا الجهاز للزيارة القادمة.',
+    'landing_fp_lang_loading' => 'جاري تحميل الصفحة…',
+
     // Error Pages
     'page_not_found' => 'الصفحة غير موجودة',
     'page_not_found_description' => 'الصفحة التي تبحث عنها غير موجودة. قد تكون تم نقلها أو حذفها أو قد تكون قد أدخلت عنوان URL غير صحيح.',
     'go_home' => 'العودة إلى الصفحة الرئيسية',
     'all_rights_reserved' => 'جميع الحقوق محفوظة.',
 ];
-

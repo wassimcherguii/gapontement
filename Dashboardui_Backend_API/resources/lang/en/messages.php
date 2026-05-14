@@ -23,7 +23,7 @@ return [
     'edit' => 'Edit',
     'delete' => 'Delete',
     'loading' => 'Loading...',
-    
+
     // Authentication
     'admin_login' => 'Admin Login',
     'superadmin_login' => 'Super Admin Login',
@@ -83,14 +83,14 @@ return [
     'manage_brand' => 'Manage Brand Assets',
     'color_palette' => 'Color Palette',
     'manage_colors' => 'Manage Color Palette',
-    
+
     // Settings
     'settings' => 'Settings',
     'theme' => 'Theme',
     'light' => 'Light',
     'dark' => 'Dark',
     'contact_us' => 'Contact Us',
-    
+
     // Admin Panel
     'admin_panel' => 'Admin Panel',
     'admin_dashboard' => 'Admin Dashboard',
@@ -101,7 +101,7 @@ return [
     'content' => 'Content',
     'reports' => 'Reports',
     'profile' => 'Profile',
-    
+
     // Dashboard Stats
     'total_users' => 'Total Users',
     'total_orders' => 'Total Orders',
@@ -136,12 +136,130 @@ return [
 
     // Website (public site pages in admin)
     'website' => 'Website',
-    'website_section_intro' => 'Manage the public website: landing page, support pages, and marketing content. Editors for each page will be added here.',
+    'website_section_intro' => 'Manage the public website: edit the landing homepage, support pages, and marketing content. Save your changes, then Publish to update the JSON files used by the live site.',
     'website_home_page' => 'Home page',
     'website_about_us' => 'About us',
     'website_blog' => 'Blog',
     'website_contacts' => 'Contacts',
     'website_editor_placeholder' => 'Page editor and content blocks will appear here in a future update.',
+
+    'blog_admin_intro' => 'Articles live in the database only (not in landing page-cache JSON). Published + featured posts appear on the homepage. Use the editor for each language.',
+    'blog_admin_new' => 'New article',
+    'blog_admin_create' => 'New blog article',
+    'blog_admin_edit' => 'Edit blog article',
+    'blog_admin_saved' => 'Article saved.',
+    'blog_admin_deleted' => 'Article deleted.',
+    'blog_admin_delete_confirm' => 'Delete this article permanently?',
+    'blog_admin_empty' => 'No articles yet.',
+    'blog_admin_col_slug' => 'Slug',
+    'blog_admin_col_status' => 'Status',
+    'blog_admin_col_featured' => 'Landing',
+    'blog_admin_col_views' => 'Views',
+    'blog_admin_col_likes' => 'Likes',
+    'blog_admin_col_saves' => 'Saves',
+    'blog_admin_col_actions' => 'Actions',
+    'blog_admin_section_meta' => 'Article settings',
+    'blog_admin_slug' => 'URL slug (lowercase, hyphens)',
+    'blog_admin_status' => 'Status',
+    'blog_admin_published_at' => 'Published at',
+    'blog_admin_featured_landing' => 'Featured on landing page',
+    'blog_admin_sort_order' => 'Sort order on landing',
+    'blog_admin_section_stats' => 'Views, likes & saves',
+    'blog_admin_stats_hint' => 'You can edit these numbers manually for now; automated counters can be added later.',
+    'blog_admin_section_images' => 'Images',
+    'blog_admin_images_hint' => 'One storage path or full URL per line (max 20). Example: storage/blog/photo.jpg',
+    'blog_admin_title' => 'Title',
+    'blog_admin_excerpt' => 'Short description (teaser)',
+    'blog_admin_body' => 'Full article (rich text)',
+    'blog_status_draft' => 'Draft',
+    'blog_status_published' => 'Published',
+    'blog_status_archived' => 'Archived',
+    'blog_public_back_home' => 'Back to home',
+    'blog_public_read_more' => 'Read more',
+    'blog_public_missing_locale' => 'This article is not available in your language yet.',
+
+    // Landing page CMS (admin /website/landing)
+    'saved' => 'Saved.',
+    'publish' => 'Publish homepage',
+    'enabled' => 'Enabled',
+    'landing_cms_publish_done' => 'Homepage published successfully.',
+    'landing_cms_tab_database' => 'Database (forms)',
+    'landing_cms_db_save_reminder' => 'Nothing is stored until you click Save. This form is long — use Save here or scroll to the bottom.',
+    'landing_cms_btn_import_json_files' => 'Import page-cache JSON → database (all locales)',
+    'landing_cms_btn_save_json_file' => 'Save to JSON file (active locale)',
+    'landing_cms_btn_import_editor_to_db' => 'Apply editor JSON → database (active locale)',
+    'landing_cms_tab_json' => 'JSON (page-cache)',
+    'landing_cms_json_intro' => 'Each locale matches the published file under jsonassets/page-cache/home.{locale}.json. The structured fields below mirror that JSON; the raw JSON panel stays in sync. Apply saves the bundle into the database for this locale. Use “Database → JSON” to regenerate all locale files from the database. After changing the database via the Database tab or this tab, run Database → JSON so the public site reads the new files.',
+    'landing_cms_json_toolbar_hint' => 'Actions apply to the active locale tab. “Save to JSON file” writes only to page-cache on disk (not the database). “Apply editor JSON → database” imports the current editor content for that locale.',
+    'landing_cms_json_form_intro' => 'Same layout as the Database tab, but values are loaded from the page-cache JSON for this locale. Edits only refresh the raw JSON in your browser until you click “Apply JSON → database”. Nothing is written to disk or the live cache files until you use those actions.',
+    'landing_cms_json_nav_item' => 'Nav item',
+    'landing_cms_json_raw_toggle' => 'Raw JSON (advanced)',
+    'landing_cms_json_why_us_cards' => 'Why us — feature cards',
+    'landing_cms_json_locale_tabs' => 'Locale JSON',
+    'landing_cms_json_editor_label' => 'Bundle for :locale',
+    'landing_cms_sync_json_to_db' => 'Apply JSON → database (this locale)',
+    'landing_cms_sync_db_to_json' => 'Write database → JSON files (all locales)',
+    'landing_cms_sync_db_to_json_hint' => 'Regenerates jsonassets/page-cache/home.*.json from the current database. Use after saving in the Database tab or after importing JSON.',
+    'landing_cms_json_invalid' => 'Invalid JSON or locale. Nothing was saved.',
+    'landing_cms_json_imported' => 'JSON applied to the database for the selected locale.',
+    'landing_cms_json_saved_to_disk' => 'Page-cache JSON file saved for this locale. Checksum meta updated.',
+    'landing_cms_json_imported_files' => 'Imported :count locale file(s) from page-cache into the database.',
+    'landing_cms_json_imported_files_none' => 'No valid page-cache JSON files were found to import.',
+    'landing_cms_checksum' => 'Checksum: :checksum',
+    'landing_cms_seo_section' => 'SEO & meta',
+    'landing_cms_top_bar_section' => 'Top bar',
+    'landing_cms_hero_section' => 'Hero',
+    'landing_cms_section_about' => 'About',
+    'landing_cms_section_contact' => 'Contact',
+    'landing_cms_section_cta' => 'Call to action',
+    'landing_cms_section_footer' => 'Footer',
+    'landing_cms_why_us_section' => 'Why us (section title)',
+    'landing_cms_quick_booking_section' => 'Quick booking',
+    'landing_cms_navigation_section' => 'Navigation',
+    'landing_cms_entities_heading' => 'Cards & rows — :section',
+    'landing_cms_block_departments' => 'Departments',
+    'landing_cms_block_featured_doctors' => 'Featured doctors',
+    'landing_cms_block_why_us' => 'Why us',
+    'landing_cms_block_testimonials' => 'Testimonials',
+    'landing_cms_block_blog' => 'Blog',
+    'landing_cms_entity_type_department' => 'Department',
+    'landing_cms_entity_type_doctor' => 'Doctor',
+    'landing_cms_entity_type_feature' => 'Feature',
+    'landing_cms_entity_type_testimonial' => 'Testimonial',
+    'landing_cms_entity_type_blog_teaser' => 'Blog teaser',
+    'landing_cms_field_meta_title' => 'Meta title',
+    'landing_cms_field_meta_description' => 'Meta description',
+    'landing_cms_field_phone' => 'Phone',
+    'landing_cms_field_emergency' => 'Emergency',
+    'landing_cms_field_hours' => 'Hours',
+    'landing_cms_field_tagline' => 'Tagline',
+    'landing_cms_field_headline' => 'Headline',
+    'landing_cms_field_subhead' => 'Subhead',
+    'landing_cms_field_cta_primary' => 'Primary button label',
+    'landing_cms_field_cta_primary_href' => 'Primary button link',
+    'landing_cms_field_cta_secondary' => 'Secondary button label',
+    'landing_cms_field_cta_secondary_href' => 'Secondary button link',
+    'landing_cms_field_title' => 'Title',
+    'landing_cms_field_lead' => 'Lead',
+    'landing_cms_field_body' => 'Body',
+    'landing_cms_field_cta' => 'CTA text',
+    'landing_cms_field_button' => 'Button label',
+    'landing_cms_field_line' => 'Footer line',
+    'landing_cms_field_subtitle' => 'Subtitle',
+    'landing_cms_field_hint' => 'Hint',
+    'landing_cms_field_href' => 'Link (href)',
+    'landing_cms_field_sort_order' => 'Sort order',
+    'landing_cms_field_slug' => 'Slug',
+    'landing_cms_field_image_path' => 'Image path',
+    'landing_cms_field_cta_label' => 'Button label (CTA)',
+    'landing_cms_nav_visible' => 'Visible in menu',
+    'landing_cms_nav_cta' => 'Call-to-action style',
+    'landing_cms_nav_label' => 'Label (:locale)',
+    'landing_cms_phase2_user_id' => 'Linked user (phase 2)',
+    'landing_cms_placeholder_title' => 'Title',
+    'landing_cms_placeholder_subtitle' => 'Subtitle',
+    'landing_cms_placeholder_body' => 'Body',
+    'landing_cms_placeholder_cta_label' => 'Button label',
 
     // Assets
     'assets' => 'Assets',
@@ -232,7 +350,7 @@ return [
     'import_from_file' => 'Import from file',
     'export_translations' => 'Export Translations',
     'export_to_file' => 'Export to file',
-    
+
     // Brand Asset Management
     'upload_logo' => 'Upload Logo',
     'upload_favicon' => 'Upload Favicon',
@@ -250,7 +368,7 @@ return [
     'upload_failed' => 'Upload failed!',
     'sync_success' => 'Sync successful!',
     'sync_failed' => 'Sync failed!',
-    
+
     // Old Brand Management
     'old_brand' => 'Old Brand',
     'old_brand_management' => 'Old Brand Management',
@@ -264,27 +382,27 @@ return [
     'delete_failed' => 'Delete failed!',
     'current' => 'Current',
     'error_loading_images' => 'Error loading images',
-    
+
     // Image Preview Modal
     'image_preview' => 'Image Preview',
     'download' => 'Download',
-    
+
     // Delete Confirmation Modal
     'confirm_delete' => 'Confirm Deletion',
     'delete_warning' => 'This action cannot be undone.',
     'delete_warning_text' => 'Are you sure you want to delete this image? This action is permanent and cannot be undone.',
-    
+
     // Notification Messages
     'delete_success_with_type' => ':type deleted successfully',
     'restore_success_with_filename' => ':type restored successfully with new filename: :filename',
     'restore_success' => ':type restored successfully',
     'cannot_delete_current' => 'Cannot delete current :type',
-    
+
     // Loading States
     'deleting' => 'Deleting',
     'restoring' => 'Restoring',
     'request_in_progress' => 'Request already in progress. Please wait.',
-    
+
     // Brand Management Notifications
     'logo_upload_success' => 'Logo uploaded successfully',
     'logo_upload_failed' => 'Logo upload failed',
@@ -296,7 +414,7 @@ return [
     'brand_sync_success' => 'Brand assets synced to JSON successfully',
     'brand_sync_failed' => 'Brand sync failed',
     'file_not_found' => 'File not found',
-    
+
     // Authentication Notifications
     'email_required' => 'Email is required',
     'email_invalid' => 'Please enter a valid email address',
@@ -308,13 +426,13 @@ return [
     'no_account_found' => 'No account found with this email address',
     'no_admin_permission' => 'You do not have permission to access the admin area',
     'password_incorrect' => 'The provided password is incorrect',
-    
+
     // Color Management
     'color_updated_success' => 'Color updated successfully',
     'color_update_failed' => 'Failed to update color',
     'color_sync_success' => 'Colors synced to JSON successfully',
     'color_sync_failed' => 'Failed to sync colors to JSON',
-    
+
     // Company Settings
     'company' => 'Company',
     'company_settings' => 'Company Settings',
@@ -431,6 +549,22 @@ return [
     'client_translations_sync_diff_checksum_match' => 'matches the database export.',
     'client_translations_sync_diff_checksum_mismatch' => 'does not match the database export.',
     'client_translations_sync_diff_checksum_no_meta' => 'No checksum metadata on disk yet (run Publish once to create it).',
+
+    // Landing page (public) floating settings
+    'landing_fp_settings' => 'Page settings',
+    'landing_fp_title' => 'Appearance & language',
+    'landing_fp_language' => 'Language',
+    'landing_fp_theme' => 'Theme',
+    'landing_fp_light' => 'Light',
+    'landing_fp_dark' => 'Dark',
+    'landing_fp_contact' => 'Contact phone',
+    'landing_fp_phone_unavailable' => 'No phone is set in the landing content yet.',
+    'landing_fp_close' => 'Close',
+    'landing_fp_open' => 'Open settings',
+    'landing_fp_kicker' => 'Preferences',
+    'landing_fp_subtitle' => 'Language, theme, and how to reach us.',
+    'landing_fp_theme_saved_hint' => 'Theme is saved on this device for your next visit.',
+    'landing_fp_lang_loading' => 'Loading page…',
 
     // Error Pages
     'page_not_found' => 'Page Not Found',

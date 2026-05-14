@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(prepend: [
             \App\Http\Middleware\SetLocale::class,
+            \App\Http\Middleware\SyncLandingThemeFromCookie::class,
         ]);
 
         // Register middleware aliases
@@ -36,10 +37,10 @@ return Application::configure(basePath: dirname(__DIR__))
             if ($request->expectsJson()) {
                 return response()->json([
                     'message' => get_translation('page_not_found') ?? 'Page not found',
-                    'error' => '404'
+                    'error' => '404',
                 ], 404);
             }
-            
+
             // Return custom 404 page for web requests
             return response()->view('errors.404', [], 404);
         });
