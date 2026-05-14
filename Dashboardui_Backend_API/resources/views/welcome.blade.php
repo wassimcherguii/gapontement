@@ -23,6 +23,13 @@
 
         return web_client_t($webKey, $fallback);
     };
+    $landingBlogPosts = \App\Models\BlogPost::query()
+        ->published()
+        ->featuredLanding()
+        ->orderBy('sort_order')
+        ->orderByDesc('published_at')
+        ->with('translations')
+        ->get();
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ $isRtl ? 'rtl' : 'ltr' }}" class="scroll-smooth" data-landing-theme="{{ $theme }}">
@@ -567,6 +574,31 @@
                             <cite class="text-sm not-italic font-semibold" style="color: var(--lp-muted);">{{ $quote['title'] ?? '' }}</cite>
                         </blockquote>
                     @endforeach
+                </div>
+            </section>
+        @endif
+
+        @if ($landingBlogPosts->isNotEmpty())
+            <section id="blog" class="py-16 sm:py-20 border-b" style="border-color: var(--lp-border); background: var(--lp-bg);">
+                <div class="max-w-screen-xl mx-auto px-4 {{ $isRtl ? 'text-right' : 'text-left' }}">
+                    <h2 class="text-2xl font-bold mb-6" style="color: var(--lp-text);">{{ get_translation('website_blog') }}</h2>
+                    <div class="grid gap-6 md:grid-cols-2">
+                        @foreach ($landingBlogPosts as $post)
+                            @php $btr = $post->translation(); @endphp
+                            @if ($btr && $btr->title !== '')
+                            <a href="{{ route('blog.show', ['lang' => app()->getLocale(), 'slug' => $post->slug]) }}" class="block p-6 rounded-xl border transition hover:shadow-md overflow-hidden" style="border-color: var(--lp-border); background: var(--lp-surface);">
+                                @if (is_array($post->images) && isset($post->images[0]) && $post->images[0] !== '')
+                                    <div class="mb-4 -mx-6 -mt-6">
+                                        <img src="{{ Str::startsWith($post->images[0], ['http://', 'https://']) ? $post->images[0] : asset($post->images[0]) }}" alt="" class="w-full h-44 object-cover" loading="lazy">
+                                    </div>
+                                @endif
+                                <h3 class="text-lg font-semibold mb-2" style="color: var(--lp-text);">{{ $btr->title }}</h3>
+                                <p class="text-sm mb-3" style="color: var(--lp-muted);">{{ Str::limit(strip_tags($btr->excerpt ?: $btr->body ?? ''), 160) }}</p>
+                                <span class="text-sm font-semibold" style="color: var(--lp-primary);">{{ get_translation('blog_public_read_more') }}</span>
+                            </a>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
             </section>
         @endif

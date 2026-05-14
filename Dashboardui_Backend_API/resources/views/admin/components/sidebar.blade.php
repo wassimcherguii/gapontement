@@ -50,6 +50,11 @@
                         {!! lucide_icon('users', 'w-4 h-4', 'currentColor') !!}
                         <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_about_us') }}</span>
                     </a>
+                    <a href="{{ route_with_lang('admin.website.blog') }}"
+                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.blog') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+                        {!! lucide_icon('file-text', 'w-4 h-4', 'currentColor') !!}
+                        <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_blog') }}</span>
+                    </a>
                     <a href="{{ route_with_lang('admin.website.contacts') }}"
                        class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.contacts') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
                         {!! lucide_icon('mail', 'w-4 h-4', 'currentColor') !!}

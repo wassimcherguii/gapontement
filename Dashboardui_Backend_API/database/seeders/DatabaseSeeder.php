@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             LogoSeeder::class,
             TranslationDomainSeeder::class,
             LandingHomeSeeder::class,
+            BlogPostsSeeder::class,
             // VisitorUsersSeeder::class, // Uncomment to seed 50 random patient users
         ]);
 
