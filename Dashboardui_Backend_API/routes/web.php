@@ -20,6 +20,10 @@ Route::prefix('{lang}')->where(['lang' => 'en|fr|ar'])->group(function () {
         return view('welcome');
     })->name('welcome');
 
+    Route::get('/blog/{slug}', [App\Http\Controllers\BlogPublicController::class, 'show'])
+        ->where('slug', '[a-z0-9]+(?:-[a-z0-9]+)*')
+        ->name('blog.show');
+
     // Portal routes (per-domain client translations; middleware sets translation_portal)
     Route::prefix('student')->middleware('portal:student')->group(function () {
         Route::get('/', function () {
@@ -78,6 +82,18 @@ Route::prefix('{lang}')->where(['lang' => 'en|fr|ar'])->group(function () {
             ->name('admin.website.landing.import_json');
         Route::get('/admin/website/about', [App\Http\Controllers\Admin\WebsitePageController::class, 'about'])
             ->name('admin.website.about');
+        Route::get('/admin/website/blog', [App\Http\Controllers\Admin\BlogPostController::class, 'index'])
+            ->name('admin.website.blog');
+        Route::get('/admin/website/blog/create', [App\Http\Controllers\Admin\BlogPostController::class, 'create'])
+            ->name('admin.website.blog.create');
+        Route::post('/admin/website/blog', [App\Http\Controllers\Admin\BlogPostController::class, 'store'])
+            ->name('admin.website.blog.store');
+        Route::get('/admin/website/blog/{blog_post}/edit', [App\Http\Controllers\Admin\BlogPostController::class, 'edit'])
+            ->name('admin.website.blog.edit');
+        Route::put('/admin/website/blog/{blog_post}', [App\Http\Controllers\Admin\BlogPostController::class, 'update'])
+            ->name('admin.website.blog.update');
+        Route::delete('/admin/website/blog/{blog_post}', [App\Http\Controllers\Admin\BlogPostController::class, 'destroy'])
+            ->name('admin.website.blog.destroy');
         Route::get('/admin/website/contacts', [App\Http\Controllers\Admin\WebsitePageController::class, 'contacts'])
             ->name('admin.website.contacts');
 
