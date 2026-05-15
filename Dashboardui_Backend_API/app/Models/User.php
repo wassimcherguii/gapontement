@@ -4,6 +4,9 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -54,6 +57,14 @@ class User extends Authenticatable
     public function hasRole(string $role): bool
     {
         return $this->role === $role;
+    }
+
+    /**
+     * @param  list<string>  $roles
+     */
+    public function hasAnyRole(array $roles): bool
+    {
+        return in_array($this->role, $roles, true);
     }
 
     public function isPatient(): bool
@@ -114,5 +125,55 @@ class User extends Authenticatable
     public static function getAvailableRoles(): array
     {
         return ['superadmin', 'admin', 'doctor', 'secretary', 'patient', 'companion'];
+    }
+
+    /**
+     * @return HasOne<Provider, $this>
+     */
+    public function providerProfile(): HasOne
+    {
+        return $this->hasOne(Provider::class);
+    }
+
+    /**
+     * @return HasOne<PatientProfile, $this>
+     */
+    public function patientProfile(): HasOne
+    {
+        return $this->hasOne(PatientProfile::class);
+    }
+
+    /**
+     * @return HasMany<Appointment, $this>
+     */
+    public function patientAppointments(): HasMany
+    {
+        return $this->hasMany(Appointment::class, 'patient_user_id');
+    }
+
+    /**
+     * @return BelongsToMany<User, $this>
+     */
+    public function companionPatients(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            self::class,
+            'companion_patients',
+            'companion_user_id',
+            'patient_user_id'
+        )->withPivot('can_book')->withTimestamps();
+    }
+
+    /**
+     * @return BelongsToMany<User, $this>
+     */
+    public function companions(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            self::class,
+            'companion_patients',
+            'patient_user_id',
+            'companion_user_id'
+        )->withPivot('can_book')->withTimestamps();
     }
 }

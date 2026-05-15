@@ -22,10 +22,23 @@ return Application::configure(basePath: dirname(__DIR__))
             'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class,
             'superadmin' => \App\Http\Middleware\EnsureUserIsSuperAdmin::class,
             'portal' => \App\Http\Middleware\SetTranslationPortal::class,
+            'role' => \App\Http\Middleware\EnsureUserHasRole::class,
         ]);
 
         $middleware->redirectTo(
             guests: function ($request) {
+                $path = trim((string) $request->path(), '/');
+                $segments = $path === '' ? [] : explode('/', $path);
+                $section = $segments[1] ?? null;
+
+                if ($section === 'patient') {
+                    return route_with_lang('patient.login');
+                }
+
+                if ($section === 'doctor') {
+                    return route_with_lang('doctor.login');
+                }
+
                 return route_with_lang('admin.login');
             }
         );
