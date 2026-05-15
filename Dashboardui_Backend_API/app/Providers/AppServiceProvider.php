@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\Appointment;
+use App\Models\User;
+use App\Policies\AppointmentPolicy;
+use App\Policies\UserPolicy;
 use App\Services\TranslationDomainRegistry;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,6 +31,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Gate::policy(Appointment::class, AppointmentPolicy::class);
+        Gate::policy(User::class, UserPolicy::class);
+
         Route::bind('domain', function (string $value) {
             $registry = app(TranslationDomainRegistry::class);
             if (! in_array($value, $registry->allowedSlugs(), true)) {

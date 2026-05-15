@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UserRoleSeeder::class,
+            AppointmentCoreSeeder::class,
             ColorPaletteSeeder::class,
             LogoSeeder::class,
             TranslationDomainSeeder::class,

@@ -43,9 +43,17 @@ Route::prefix('{lang}')->where(['lang' => 'en|fr|ar'])->group(function () {
         Route::get('/admin/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('admin.login');
         Route::post('/admin/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->name('admin.login.submit');
 
-        // Default login route - redirects to admin login
+        // Patient / companion login
+        Route::get('/patient/login', [App\Http\Controllers\Patient\AuthController::class, 'showLoginForm'])->name('patient.login');
+        Route::post('/patient/login', [App\Http\Controllers\Patient\AuthController::class, 'login'])->name('patient.login.submit');
+
+        // Doctor login
+        Route::get('/doctor/login', [App\Http\Controllers\Doctor\AuthController::class, 'showLoginForm'])->name('doctor.login');
+        Route::post('/doctor/login', [App\Http\Controllers\Doctor\AuthController::class, 'login'])->name('doctor.login.submit');
+
+        // Default login route - chooser between patient and staff/admin.
         Route::get('/login', function () {
-            return redirect()->route('admin.login', ['lang' => app()->getLocale()]);
+            return view('auth.login-chooser');
         })->name('login');
 
         // SuperAdmin Login
@@ -194,6 +202,31 @@ Route::prefix('{lang}')->where(['lang' => 'en|fr|ar'])->group(function () {
 
         // Admin Logout
         Route::post('/admin/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('admin.logout');
+
+        // Clinic users (MVP) - limited roles only.
+        Route::prefix('admin/users')->group(function () {
+            Route::get('/', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users.index');
+            Route::get('/create', [App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin.users.create');
+            Route::post('/', [App\Http\Controllers\Admin\UserController::class, 'store'])->name('admin.users.store');
+            Route::get('/{user}/edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin.users.edit');
+            Route::match(['put', 'patch'], '/{user}', [App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.users.update');
+            Route::delete('/{user}', [App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin.users.destroy');
+        });
+    });
+
+    Route::middleware(['auth', 'role:patient,companion'])->prefix('patient')->group(function () {
+        Route::post('/logout', [App\Http\Controllers\Patient\AuthController::class, 'logout'])->name('patient.logout');
+        Route::get('/dashboard', [App\Http\Controllers\Patient\DashboardController::class, 'index'])->name('patient.dashboard');
+        Route::get('/appointments/create', [App\Http\Controllers\Patient\AppointmentController::class, 'create'])->name('patient.appointments.create');
+        Route::post('/appointments', [App\Http\Controllers\Patient\AppointmentController::class, 'store'])->name('patient.appointments.store');
+        Route::get('/appointments/{appointment}', [App\Http\Controllers\Patient\AppointmentController::class, 'show'])->name('patient.appointments.show');
+        Route::post('/appointments/{appointment}/cancel', [App\Http\Controllers\Patient\AppointmentController::class, 'cancel'])->name('patient.appointments.cancel');
+    });
+
+    Route::middleware(['auth', 'role:doctor'])->prefix('doctor')->group(function () {
+        Route::post('/logout', [App\Http\Controllers\Doctor\AuthController::class, 'logout'])->name('doctor.logout');
+        Route::get('/dashboard', [App\Http\Controllers\Doctor\DashboardController::class, 'index'])->name('doctor.dashboard');
+        Route::post('/appointments/{appointment}/status', [App\Http\Controllers\Doctor\DashboardController::class, 'updateStatus'])->name('doctor.appointments.status');
     });
 
     // SuperAdmin Routes (protected - requires superadmin role only)

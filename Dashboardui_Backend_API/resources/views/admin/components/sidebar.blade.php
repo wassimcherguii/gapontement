@@ -25,6 +25,12 @@
             <span class="font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('dashboard') }}</span>
         </a>
 
+        <a href="{{ route_with_lang('admin.users.index') }}"
+           class="flex items-center px-4 py-3 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.users.*') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+            {!! lucide_icon('users', 'w-5 h-5', 'currentColor') !!}
+            <span class="font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('clinic_users') }}</span>
+        </a>
+
         <!-- Website — landing & support pages -->
         <div class="mb-2">
             <button id="websiteDropdownToggle" 
