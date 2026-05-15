@@ -23,7 +23,7 @@ php artisan landing:publish home
 
 ## Admin
 
-**Website → Home page** (`/{lang}/admin/website/home`): edit meta, sections, navigation, entities, then **Save**. Use **Publish homepage** to write JSON files.
+**Website → Home page (landing CMS)** (`/{lang}/admin/website/landing`): edit meta, sections, navigation, entities, then **Save**. Use **Publish homepage** to write JSON files. Old URL `/admin/website/home` permanently redirects here.
 
 ## Deploy notes
 

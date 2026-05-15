@@ -26,6 +26,15 @@ class WelcomeLandingTest extends TestCase
         $response->assertSee(LandingHomeSeeder::HERO_HEADLINE_EN, false);
     }
 
+    public function test_theme_json_updates_session_without_full_page_redirect(): void
+    {
+        $response = $this->postJson('/en/preferences/theme', ['theme' => 'dark']);
+
+        $response->assertOk();
+        $response->assertJson(['ok' => true]);
+        $this->assertSame('dark', session('theme'));
+    }
+
     public function test_welcome_french_shows_published_headline_from_json(): void
     {
         $response = $this->get('/fr/');

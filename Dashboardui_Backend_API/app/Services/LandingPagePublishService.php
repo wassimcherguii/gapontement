@@ -4,8 +4,8 @@ namespace App\Services;
 
 use App\Models\LandingEntity;
 use App\Models\LandingPage;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
 
 class LandingPagePublishService
 {
@@ -24,16 +24,17 @@ class LandingPagePublishService
      */
     public function publish(string $slug): array
     {
-        $page = LandingPage::query()
-            ->where('slug', $slug)
-            ->with([
-                'locales',
-                'navItems.translations',
-                'sections.translations',
-                'sections.entities.translations',
-                'sections.entities.user',
-            ])
-            ->firstOrFail();
+        $page = LandingPage::query()->firstOrCreate(
+            ['slug' => $slug],
+            []
+        );
+        $page->load([
+            'locales',
+            'navItems.translations',
+            'sections.translations',
+            'sections.entities.translations',
+            'sections.entities.user',
+        ]);
 
         $locales = array_keys(get_supported_languages());
         $bundles = [];
@@ -56,6 +57,40 @@ class LandingPagePublishService
         File::put($this->metaPath($slug), json_encode($meta, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
         return ['locales' => $locales, 'meta' => $meta];
+    }
+
+    /**
+     * Recompute home._meta.json checksum from existing page-cache locale files (after manual JSON edits).
+     *
+     * @param  list<string>  $locales
+     */
+    public function refreshMetaFromDisk(string $slug, array $locales): void
+    {
+        $bundles = [];
+        foreach ($locales as $locale) {
+            $path = $this->pathForLocale($slug, $locale);
+            if (! File::exists($path)) {
+                $bundles[$locale] = [];
+
+                continue;
+            }
+            try {
+                $decoded = json_decode(File::get($path), true, 512, JSON_THROW_ON_ERROR);
+                $bundles[$locale] = is_array($decoded) ? $decoded : [];
+            } catch (\JsonException) {
+                $bundles[$locale] = [];
+            }
+        }
+        ksort($bundles);
+        $meta = [
+            'page' => $slug,
+            'generated_at' => now()->toIso8601String(),
+            'checksum' => hash('sha256', json_encode($bundles, JSON_UNESCAPED_UNICODE)),
+            'version' => 1,
+            'locales' => $locales,
+        ];
+        File::ensureDirectoryExists(base_path('jsonassets/page-cache'));
+        File::put($this->metaPath($slug), json_encode($meta, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
 
     /**
@@ -88,7 +123,7 @@ class LandingPagePublishService
             ),
             'whyUs' => $this->composeWhyUs($page, $locale),
             'testimonials' => $this->composeEntities($page, 'testimonials', $locale),
-            'blog' => $this->composeEntities($page, 'blog', $locale),
+            'blog' => [],
             'contact' => $this->sectionContent($page, 'contact', $locale) ?? [],
             'footer' => $this->sectionContent($page, 'footer', $locale) ?? [],
         ];
@@ -141,7 +176,7 @@ class LandingPagePublishService
     private function composeNav(LandingPage $page, string $locale): array
     {
         $items = [];
-        foreach ($page->navItems->where('is_visible', true)->sortBy('sort_order') as $nav) {
+        foreach ($page->navItems->sortBy('sort_order') as $nav) {
             $tr = $nav->translations->firstWhere('locale', $locale)
                 ?? $nav->translations->firstWhere('locale', 'en');
             if (! $tr) {
@@ -151,6 +186,7 @@ class LandingPagePublishService
                 'href' => $nav->href,
                 'label' => $tr->label,
                 'is_cta' => (bool) $nav->is_cta,
+                'is_visible' => (bool) $nav->is_visible,
                 'route_key' => $nav->route_key,
                 'icon' => $nav->icon,
             ];

@@ -235,23 +235,5 @@ class LandingHomeSeeder extends Seeder
                 ]);
             }
         }
-
-        $blogSection = LandingSection::query()->where('landing_page_id', $page->id)->where('section_key', 'blog')->first();
-        if ($blogSection) {
-            LandingEntity::query()->where('landing_section_id', $blogSection->id)->delete();
-            $b1 = LandingEntity::query()->create([
-                'landing_section_id' => $blogSection->id,
-                'type' => 'blog_teaser',
-                'sort_order' => 0,
-                'slug' => 'welcome-post',
-                'image_path' => null,
-                'href' => '#blog',
-                'user_id' => null,
-                'extra' => null,
-            ]);
-            foreach (['en' => ['title' => 'What’s new', 'body' => 'Product updates and tips for clinics.', 'cta_label' => 'Read'], 'fr' => ['title' => 'Nouveautés', 'body' => 'Mises à jour produit.', 'cta_label' => 'Lire'], 'ar' => ['title' => 'جديد', 'body' => 'تحديثات المنتج.', 'cta_label' => 'اقرأ']] as $loc => $t) {
-                $b1->translations()->create(array_merge(['locale' => $loc], $t, ['subtitle' => null]));
-            }
-        }
     }
 }

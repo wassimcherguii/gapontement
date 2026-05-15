@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\View\View;
 
 class WebsitePageController extends Controller
 {
@@ -10,22 +11,22 @@ class WebsitePageController extends Controller
      * @var array<string, string> slug => messages.php key for page title
      */
     private const PAGES = [
-        'home' => 'website_home_page',
         'about' => 'website_about_us',
-        'blog' => 'website_blog',
         'contacts' => 'website_contacts',
     ];
 
-    public function show(string $page)
+    public function about(): View
     {
-        if (! array_key_exists($page, self::PAGES)) {
-            abort(404);
-        }
+        return $this->render('about');
+    }
 
-        if ($page === 'home') {
-            return app(LandingHomeController::class)->edit();
-        }
+    public function contacts(): View
+    {
+        return $this->render('contacts');
+    }
 
+    private function render(string $page): View
+    {
         return view('admin.website.page', [
             'page' => $page,
             'titleKey' => self::PAGES[$page],

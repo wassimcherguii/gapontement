@@ -2,7 +2,7 @@
     "version": 1,
     "page": "home",
     "locale": "fr",
-    "generated_at": "2026-05-03T23:52:23+00:00",
+    "generated_at": "2026-05-14T23:56:35+00:00",
     "meta": {
         "title": null,
         "description": null
@@ -17,6 +17,7 @@
             "href": "#about",
             "label": "À propos",
             "is_cta": false,
+            "is_visible": true,
             "route_key": null,
             "icon": null
         },
@@ -24,6 +25,7 @@
             "href": "#features",
             "label": "Fonctions",
             "is_cta": false,
+            "is_visible": true,
             "route_key": null,
             "icon": null
         },
@@ -31,6 +33,7 @@
             "href": "#contact",
             "label": "Contact",
             "is_cta": false,
+            "is_visible": true,
             "route_key": null,
             "icon": null
         },
@@ -38,6 +41,7 @@
             "href": "#appointments",
             "label": "Prendre rendez-vous",
             "is_cta": true,
+            "is_visible": true,
             "route_key": null,
             "icon": null
         }
@@ -152,20 +156,7 @@
             "cta_label": null
         }
     ],
-    "blog": [
-        {
-            "type": "blog_teaser",
-            "slug": "welcome-post",
-            "image": null,
-            "href": "#blog",
-            "user_id": null,
-            "extra": null,
-            "title": "Nouveautés",
-            "subtitle": null,
-            "body": "Mises à jour produit.",
-            "cta_label": "Lire"
-        }
-    ],
+    "blog": [],
     "contact": {
         "title": "Contact",
         "body": "Démos et support.",

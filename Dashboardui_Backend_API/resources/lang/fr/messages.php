@@ -23,7 +23,7 @@ return [
     'edit' => 'Modifier',
     'delete' => 'Supprimer',
     'loading' => 'Chargement...',
-    
+
     // Authentication
     'admin_login' => 'Connexion Admin',
     'superadmin_login' => 'Connexion Super Admin',
@@ -50,14 +50,14 @@ return [
     'manage_brand' => 'Gérer les actifs de marque',
     'color_palette' => 'Palette de couleurs',
     'manage_colors' => 'Gérer la palette de couleurs',
-    
+
     // Settings
     'settings' => 'Paramètres',
     'theme' => 'Thème',
     'light' => 'Clair',
     'dark' => 'Sombre',
     'contact_us' => 'Nous Contacter',
-    
+
     // Admin Panel
     'admin_panel' => 'Panneau d\'administration',
     'admin_dashboard' => 'Tableau de bord administrateur',
@@ -68,7 +68,7 @@ return [
     'content' => 'Contenu',
     'reports' => 'Rapports',
     'profile' => 'Profil',
-    
+
     // Dashboard Stats
     'total_users' => 'Total des utilisateurs',
     'total_orders' => 'Total des commandes',
@@ -103,12 +103,130 @@ return [
 
     // Website
     'website' => 'Site web',
-    'website_section_intro' => 'Gérez le site public : page d’accueil, pages d’aide et contenus marketing. Les éditeurs pour chaque page seront ajoutés ici.',
+    'website_section_intro' => 'Gérez le site public : modifiez la page d’accueil, les pages d’aide et le contenu marketing. Enregistrez puis Publiez pour mettre à jour les fichiers JSON du site.',
     'website_home_page' => 'Page d’accueil',
     'website_about_us' => 'À propos',
     'website_blog' => 'Blog',
     'website_contacts' => 'Contacts',
     'website_editor_placeholder' => 'L’éditeur de page et les blocs de contenu seront ajoutés ici dans une prochaine version.',
+
+    'blog_admin_intro' => 'Les articles sont uniquement en base (pas dans le JSON page-cache). Les articles publiés et mis en avant apparaissent sur l’accueil.',
+    'blog_admin_new' => 'Nouvel article',
+    'blog_admin_create' => 'Nouvel article de blog',
+    'blog_admin_edit' => 'Modifier l’article',
+    'blog_admin_saved' => 'Article enregistré.',
+    'blog_admin_deleted' => 'Article supprimé.',
+    'blog_admin_delete_confirm' => 'Supprimer définitivement cet article ?',
+    'blog_admin_empty' => 'Aucun article pour le moment.',
+    'blog_admin_col_slug' => 'Slug',
+    'blog_admin_col_status' => 'Statut',
+    'blog_admin_col_featured' => 'Accueil',
+    'blog_admin_col_views' => 'Vues',
+    'blog_admin_col_likes' => 'J’aime',
+    'blog_admin_col_saves' => 'Enregistrements',
+    'blog_admin_col_actions' => 'Actions',
+    'blog_admin_section_meta' => 'Paramètres',
+    'blog_admin_slug' => 'Slug d’URL (minuscules, tirets)',
+    'blog_admin_status' => 'Statut',
+    'blog_admin_published_at' => 'Date de publication',
+    'blog_admin_featured_landing' => 'À la une sur la page d’accueil',
+    'blog_admin_sort_order' => 'Ordre sur la page d’accueil',
+    'blog_admin_section_stats' => 'Vues, j’aime et enregistrements',
+    'blog_admin_stats_hint' => 'Vous pouvez ajuster ces chiffres manuellement pour l’instant.',
+    'blog_admin_section_images' => 'Images',
+    'blog_admin_images_hint' => 'Un chemin ou URL par ligne (max 20). Ex. : storage/blog/photo.jpg',
+    'blog_admin_title' => 'Titre',
+    'blog_admin_excerpt' => 'Description courte (accroche)',
+    'blog_admin_body' => 'Contenu complet (éditeur)',
+    'blog_status_draft' => 'Brouillon',
+    'blog_status_published' => 'Publié',
+    'blog_status_archived' => 'Archivé',
+    'blog_public_back_home' => 'Retour à l’accueil',
+    'blog_public_read_more' => 'Lire la suite',
+    'blog_public_missing_locale' => 'Cet article n’est pas disponible dans votre langue.',
+
+    // Landing page CMS (admin /website/landing)
+    'saved' => 'Enregistré.',
+    'publish' => 'Publier la page d’accueil',
+    'enabled' => 'Activé',
+    'landing_cms_publish_done' => 'La page d’accueil a été publiée.',
+    'landing_cms_tab_database' => 'Base de données (formulaires)',
+    'landing_cms_db_save_reminder' => 'Rien n’est enregistré tant que vous n’avez pas cliqué sur Enregistrer. Le formulaire est long — utilisez le bouton ici ou faites défiler jusqu’en bas.',
+    'landing_cms_btn_import_json_files' => 'Importer les JSON page-cache → base (toutes les langues)',
+    'landing_cms_btn_save_json_file' => 'Enregistrer dans le fichier JSON (langue active)',
+    'landing_cms_btn_import_editor_to_db' => 'Appliquer le JSON de l’éditeur → base (langue active)',
+    'landing_cms_tab_json' => 'JSON (cache page)',
+    'landing_cms_json_intro' => 'Chaque langue correspond au fichier publié jsonassets/page-cache/home.{locale}.json. Les champs ci-dessous reflètent ce JSON ; le panneau JSON brut reste synchronisé. Appliquer enregistre le paquet dans la base pour cette langue. Utilisez « Base → JSON » pour régénérer tous les fichiers. Après des changements (onglet Base ou ici), exécutez Base → JSON pour le site public.',
+    'landing_cms_json_toolbar_hint' => 'Les actions concernent l’onglet de langue actif. « Enregistrer dans le fichier JSON » écrit uniquement le page-cache sur disque (pas la base). « Appliquer le JSON de l’éditeur → base » importe le contenu actuel de l’éditeur pour cette langue.',
+    'landing_cms_json_form_intro' => 'Même disposition que l’onglet Base, mais les valeurs viennent du JSON page-cache pour cette langue. Les modifications ne mettent à jour que le JSON brut dans le navigateur tant que vous n’avez pas cliqué sur « Appliquer JSON → base ». Rien n’est écrit sur le disque ni dans les fichiers cache tant que vous n’utilisez pas ces actions.',
+    'landing_cms_json_nav_item' => 'Élément de menu',
+    'landing_cms_json_raw_toggle' => 'JSON brut (avancé)',
+    'landing_cms_json_why_us_cards' => 'Pourquoi nous — cartes',
+    'landing_cms_json_locale_tabs' => 'JSON par langue',
+    'landing_cms_json_editor_label' => 'Paquet :locale',
+    'landing_cms_sync_json_to_db' => 'Appliquer JSON → base (cette langue)',
+    'landing_cms_sync_db_to_json' => 'Écrire base → fichiers JSON (toutes langues)',
+    'landing_cms_sync_db_to_json_hint' => 'Régénère jsonassets/page-cache/home.*.json depuis la base. À utiliser après enregistrement dans l’onglet Base ou après import JSON.',
+    'landing_cms_json_invalid' => 'JSON ou langue invalide. Aucune modification.',
+    'landing_cms_json_imported' => 'JSON appliqué à la base pour la langue sélectionnée.',
+    'landing_cms_json_saved_to_disk' => 'Fichier JSON page-cache enregistré pour cette langue. Méta-checksum mise à jour.',
+    'landing_cms_json_imported_files' => ':count fichier(s) langue importé(s) depuis le page-cache vers la base.',
+    'landing_cms_json_imported_files_none' => 'Aucun fichier JSON page-cache valide à importer.',
+    'landing_cms_checksum' => 'Empreinte : :checksum',
+    'landing_cms_seo_section' => 'SEO & méta',
+    'landing_cms_top_bar_section' => 'Barre supérieure',
+    'landing_cms_hero_section' => 'Bannière principale',
+    'landing_cms_section_about' => 'À propos',
+    'landing_cms_section_contact' => 'Contact',
+    'landing_cms_section_cta' => 'Appel à l’action',
+    'landing_cms_section_footer' => 'Pied de page',
+    'landing_cms_why_us_section' => 'Pourquoi nous (titres de section)',
+    'landing_cms_quick_booking_section' => 'Réservation rapide',
+    'landing_cms_navigation_section' => 'Navigation',
+    'landing_cms_entities_heading' => 'Cartes & lignes — :section',
+    'landing_cms_block_departments' => 'Services',
+    'landing_cms_block_featured_doctors' => 'Médecins mis en avant',
+    'landing_cms_block_why_us' => 'Pourquoi nous',
+    'landing_cms_block_testimonials' => 'Témoignages',
+    'landing_cms_block_blog' => 'Blog',
+    'landing_cms_entity_type_department' => 'Service',
+    'landing_cms_entity_type_doctor' => 'Médecin',
+    'landing_cms_entity_type_feature' => 'Atout',
+    'landing_cms_entity_type_testimonial' => 'Témoignage',
+    'landing_cms_entity_type_blog_teaser' => 'Aperçu article',
+    'landing_cms_field_meta_title' => 'Titre méta',
+    'landing_cms_field_meta_description' => 'Description méta',
+    'landing_cms_field_phone' => 'Téléphone',
+    'landing_cms_field_emergency' => 'Urgences',
+    'landing_cms_field_hours' => 'Horaires',
+    'landing_cms_field_tagline' => 'Slogan',
+    'landing_cms_field_headline' => 'Titre principal',
+    'landing_cms_field_subhead' => 'Sous-titre',
+    'landing_cms_field_cta_primary' => 'Libellé bouton principal',
+    'landing_cms_field_cta_primary_href' => 'Lien bouton principal',
+    'landing_cms_field_cta_secondary' => 'Libellé bouton secondaire',
+    'landing_cms_field_cta_secondary_href' => 'Lien bouton secondaire',
+    'landing_cms_field_title' => 'Titre',
+    'landing_cms_field_lead' => 'Chapô',
+    'landing_cms_field_body' => 'Corps de texte',
+    'landing_cms_field_cta' => 'Texte du CTA',
+    'landing_cms_field_button' => 'Libellé du bouton',
+    'landing_cms_field_line' => 'Ligne de pied de page',
+    'landing_cms_field_subtitle' => 'Sous-titre',
+    'landing_cms_field_hint' => 'Indice',
+    'landing_cms_field_href' => 'Lien (href)',
+    'landing_cms_field_sort_order' => 'Ordre d’affichage',
+    'landing_cms_field_slug' => 'Slug',
+    'landing_cms_field_image_path' => 'Chemin de l’image',
+    'landing_cms_field_cta_label' => 'Libellé du bouton (CTA)',
+    'landing_cms_nav_visible' => 'Visible dans le menu',
+    'landing_cms_nav_cta' => 'Style bouton d’action',
+    'landing_cms_nav_label' => 'Libellé (:locale)',
+    'landing_cms_phase2_user_id' => 'Utilisateur lié (phase 2)',
+    'landing_cms_placeholder_title' => 'Titre',
+    'landing_cms_placeholder_subtitle' => 'Sous-titre',
+    'landing_cms_placeholder_body' => 'Corps',
+    'landing_cms_placeholder_cta_label' => 'Libellé du bouton',
 
     // Assets
     'assets' => 'Ressources',
@@ -199,7 +317,7 @@ return [
     'import_from_file' => 'Importer depuis un fichier',
     'export_translations' => 'Exporter les Traductions',
     'export_to_file' => 'Exporter vers un fichier',
-    
+
     // Brand Asset Management
     'upload_logo' => 'Télécharger Logo',
     'upload_favicon' => 'Télécharger Favicon',
@@ -217,7 +335,7 @@ return [
     'upload_failed' => 'Échec du téléchargement !',
     'sync_success' => 'Synchronisation réussie !',
     'sync_failed' => 'Échec de la synchronisation !',
-    
+
     // Old Brand Management
     'old_brand' => 'Ancienne Marque',
     'old_brand_management' => 'Gestion de l\'Ancienne Marque',
@@ -231,27 +349,27 @@ return [
     'delete_failed' => 'Échec de la suppression !',
     'current' => 'Actuel',
     'error_loading_images' => 'Erreur lors du chargement des images',
-    
+
     // Image Preview Modal
     'image_preview' => 'Aperçu de l\'Image',
     'download' => 'Télécharger',
-    
+
     // Delete Confirmation Modal
     'confirm_delete' => 'Confirmer la Suppression',
     'delete_warning' => 'Cette action ne peut pas être annulée.',
     'delete_warning_text' => 'Êtes-vous sûr de vouloir supprimer cette image ? Cette action est permanente et ne peut pas être annulée.',
-    
+
     // Notification Messages
     'delete_success_with_type' => ':type supprimé avec succès',
     'restore_success_with_filename' => ':type restauré avec succès avec le nouveau nom de fichier : :filename',
     'restore_success' => ':type restauré avec succès',
     'cannot_delete_current' => 'Impossible de supprimer le :type actuel',
-    
+
     // Loading States
     'deleting' => 'Suppression',
     'restoring' => 'Restauration',
     'request_in_progress' => 'Requête déjà en cours. Veuillez patienter.',
-    
+
     // Brand Management Notifications
     'logo_upload_success' => 'Logo téléchargé avec succès',
     'logo_upload_failed' => 'Échec du téléchargement du logo',
@@ -263,7 +381,7 @@ return [
     'brand_sync_success' => 'Actifs de marque synchronisés vers JSON avec succès',
     'brand_sync_failed' => 'Échec de la synchronisation de la marque',
     'file_not_found' => 'Fichier non trouvé',
-    
+
     // Authentication Notifications
     'email_required' => 'L\'email est requis',
     'email_invalid' => 'Veuillez entrer une adresse email valide',
@@ -272,13 +390,13 @@ return [
     'no_account_found' => 'Aucun compte trouvé avec cette adresse email',
     'no_admin_permission' => 'Vous n\'avez pas la permission d\'accéder à la zone d\'administration',
     'password_incorrect' => 'Le mot de passe fourni est incorrect',
-    
+
     // Color Management
     'color_updated_success' => 'Couleur mise à jour avec succès',
     'color_update_failed' => 'Échec de la mise à jour de la couleur',
     'color_sync_success' => 'Couleurs synchronisées vers JSON avec succès',
     'color_sync_failed' => 'Échec de la synchronisation des couleurs vers JSON',
-    
+
     // Company Settings
     'company' => 'Entreprise',
     'company_settings' => 'Paramètres de l\'entreprise',
@@ -394,6 +512,22 @@ return [
     'client_translations_sync_diff_checksum_match' => 'correspond à l’export depuis la base.',
     'client_translations_sync_diff_checksum_mismatch' => 'ne correspond pas à l’export depuis la base.',
     'client_translations_sync_diff_checksum_no_meta' => 'Pas encore de métadonnées de checksum (lancez Publier une fois).',
+
+    // Landing page (public) floating settings
+    'landing_fp_settings' => 'Paramètres de la page',
+    'landing_fp_title' => 'Apparence et langue',
+    'landing_fp_language' => 'Langue',
+    'landing_fp_theme' => 'Thème',
+    'landing_fp_light' => 'Clair',
+    'landing_fp_dark' => 'Sombre',
+    'landing_fp_contact' => 'Téléphone de contact',
+    'landing_fp_phone_unavailable' => 'Aucun numéro dans le contenu de la page pour le moment.',
+    'landing_fp_close' => 'Fermer',
+    'landing_fp_open' => 'Ouvrir les paramètres',
+    'landing_fp_kicker' => 'Préférences',
+    'landing_fp_subtitle' => 'Langue, thème et contact.',
+    'landing_fp_theme_saved_hint' => 'Le thème est enregistré sur cet appareil pour votre prochaine visite.',
+    'landing_fp_lang_loading' => 'Chargement de la page…',
 
     // Error Pages
     'page_not_found' => 'Page introuvable',

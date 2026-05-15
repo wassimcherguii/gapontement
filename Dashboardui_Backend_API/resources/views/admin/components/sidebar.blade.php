@@ -29,7 +29,7 @@
         <div class="mb-2">
             <button id="websiteDropdownToggle" 
                     type="button"
-                    class="w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 admin-hover {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse' : '' }} {{ request()->routeIs('admin.website.page') ? 'admin-active' : '' }}">
+                    class="w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 admin-hover {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse' : '' }} {{ request()->routeIs('admin.website.*') ? 'admin-active' : '' }}">
                 <div class="flex items-center {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
                     {!! lucide_icon('globe', 'w-5 h-5', 'currentColor') !!}
                     <span class="font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website') }}</span>
@@ -40,23 +40,18 @@
             </button>
             <div id="websiteDropdownMenu" class="hidden overflow-hidden transition-all duration-300 ease-in-out">
                 <div class="pl-4 {{ is_rtl_language(app()->getLocale()) ? 'pr-4 pl-0' : '' }} space-y-1 mt-1">
-                    <a href="{{ route_with_lang('admin.website.page', ['page' => 'home']) }}"
-                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.page') && request()->route('page') === 'home' ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+                    <a href="{{ route_with_lang('admin.website.landing') }}"
+                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.landing') || request()->routeIs('admin.website.landing.*') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
                         {!! lucide_icon('home', 'w-4 h-4', 'currentColor') !!}
                         <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_home_page') }}</span>
                     </a>
-                    <a href="{{ route_with_lang('admin.website.page', ['page' => 'about']) }}"
-                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.page') && request()->route('page') === 'about' ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+                    <a href="{{ route_with_lang('admin.website.about') }}"
+                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.about') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
                         {!! lucide_icon('users', 'w-4 h-4', 'currentColor') !!}
                         <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_about_us') }}</span>
                     </a>
-                    <a href="{{ route_with_lang('admin.website.page', ['page' => 'blog']) }}"
-                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.page') && request()->route('page') === 'blog' ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
-                        {!! lucide_icon('file-text', 'w-4 h-4', 'currentColor') !!}
-                        <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_blog') }}</span>
-                    </a>
-                    <a href="{{ route_with_lang('admin.website.page', ['page' => 'contacts']) }}"
-                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.page') && request()->route('page') === 'contacts' ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+                    <a href="{{ route_with_lang('admin.website.contacts') }}"
+                       class="flex items-center px-4 py-2 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.contacts') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
                         {!! lucide_icon('mail', 'w-4 h-4', 'currentColor') !!}
                         <span class="text-sm font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_contacts') }}</span>
                     </a>
@@ -64,11 +59,11 @@
             </div>
         </div>
         
-        <!-- Content Management -->
-        <a href="#" 
-           class="flex items-center px-4 py-3 rounded-lg transition-all duration-200 admin-hover {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
+        <!-- Landing homepage (CMS) — same editor as Website → Home page -->
+        <a href="{{ route_with_lang('admin.website.landing') }}"
+           class="flex items-center px-4 py-3 rounded-lg transition-all duration-200 {{ request()->routeIs('admin.website.landing') || request()->routeIs('admin.website.landing.*') ? 'admin-active' : 'admin-hover' }} {{ is_rtl_language(app()->getLocale()) ? 'flex-row-reverse space-x-reverse space-x-3' : 'space-x-3' }}">
             {!! lucide_icon('file-text', 'w-5 h-5', 'currentColor') !!}
-            <span class="font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('content') }}</span>
+            <span class="font-medium {{ is_rtl_language(app()->getLocale()) ? 'text-right' : 'text-left' }}">{{ get_translation('website_home_page') }}</span>
         </a>
         
         <!-- Assets Group - Collapsible Dropdown -->
